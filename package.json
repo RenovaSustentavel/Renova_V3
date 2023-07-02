@@ -8,11 +8,12 @@
     "npm": "please use yarn"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.3.3",
@@ -26,6 +27,10 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
     "prettier": "^2.8.8"
   }
 }
