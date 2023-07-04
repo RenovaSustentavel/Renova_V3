@@ -21,6 +21,7 @@
 
 .img {
   width: 300px;
+  height: auto;
   margin: auto;
   display: block;
   transition: all 0.3s ease;

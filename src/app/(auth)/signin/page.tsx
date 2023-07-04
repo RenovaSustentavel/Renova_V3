@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 import style from "./style.module.css";
@@ -27,7 +28,13 @@ export default function Page() {
     <main className={style.main}>
       <div>
         <div className={style.container}>
-          <img className={style.img} src="/img/logo.jpg" alt="Logo" />
+          <Image
+            width={400}
+            height={100}
+            className={style.img}
+            src="/img/logo.jpg"
+            alt="Logo"
+          />
         </div>
         <form className={style.form} onSubmit={handleSubmit}>
           <div className={style.formField}>
