@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { verifyAuth } from "./lib/auth";
 
 export async function middleware(request: NextRequest) {
-  if (request.nextUrl.pathname.startsWith("/signin")) {
+  if (request.nextUrl.pathname === "/signin") {
     try {
       await verifyAuth(request);
       return NextResponse.redirect(new URL("/", request.url));
