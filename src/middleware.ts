@@ -9,6 +9,13 @@ export async function middleware(request: NextRequest) {
     } catch (err) {
       return NextResponse.next();
     }
+  } else if (request.nextUrl.pathname.startsWith("/api")) {
+    try {
+      await verifyAuth(request);
+      return NextResponse.next();
+    } catch (err) {
+      return NextResponse.json({ error: "Not authorized" }, { status: 401 });
+    }
   } else {
     try {
       await verifyAuth(request);
