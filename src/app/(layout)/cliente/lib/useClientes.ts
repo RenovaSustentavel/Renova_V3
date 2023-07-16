@@ -29,7 +29,7 @@ export default function useFriendStatus() {
       })
         .then((response) => response.json())
         .then((data) => {
-          setClientes(data);
+          if (!data.error) setClientes(data);
         });
     };
     fetchClientes();
