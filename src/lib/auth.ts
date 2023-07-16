@@ -46,7 +46,7 @@ export class AuthError extends Error {}
  * Verifies the user's JWT token and returns its payload if it's valid.
  */
 export async function verifyAuth(req: NextRequest) {
-  const token = req.cookies.get(getUserToken())?.value;
+  let token = req.cookies.get(getUserToken())?.value;
 
   if (!token) throw new AuthError("Missing user token");
 
