@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./style.module.css";
 
-export default function Page() {
+export default function MainNavbar() {
   return (
     <Navbar className={styles.navbar} bg="light" variant="light">
       <Container>

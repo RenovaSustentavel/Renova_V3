@@ -1,5 +1,5 @@
+import MainNavbar from "@/app/(layout)/components/MainNavbar/MainNavbar";
 import "@/app/globals.css";
-import MainNavbar from "@/components/MainNavbar/MainNavbar";
 import "bootstrap/dist/css/bootstrap.css";
 
 export const metadata = {
